@@ -15,6 +15,8 @@
 		2EBE8E76241F213B00A3FBAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBE8E75241F213B00A3FBAB /* Assets.xcassets */; };
 		2EBE8E79241F213B00A3FBAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EBE8E77241F213B00A3FBAB /* LaunchScreen.storyboard */; };
 		2EBE8E84241F213B00A3FBAB /* SwiftForCompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE8E83241F213B00A3FBAB /* SwiftForCompassTests.swift */; };
+		2EBE8E8F241F271E00A3FBAB /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE8E8E241F271E00A3FBAB /* Agent.swift */; };
+		2EBE8E92241F2A4D00A3FBAB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE8E91241F2A4D00A3FBAB /* Event.swift */; };
 		3CC7E83FD4A20EEE511B6039 /* TopConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266277721BA58DF65439A27 /* TopConfigurator.swift */; };
 		5BAA9DEE543055BF83F135A8 /* TopViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D43099864F3605BBDCE4D48 /* TopViewOutput.swift */; };
 		5F800C7124FC3F27438DC2D2 /* TopRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD58734F88649BC762F42E4F /* TopRouter.swift */; };
@@ -57,6 +59,8 @@
 		2EBE8E7F241F213B00A3FBAB /* SwiftForCompassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftForCompassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBE8E83241F213B00A3FBAB /* SwiftForCompassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftForCompassTests.swift; sourceTree = "<group>"; };
 		2EBE8E85241F213B00A3FBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EBE8E8E241F271E00A3FBAB /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
+		2EBE8E91241F2A4D00A3FBAB /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3D43099864F3605BBDCE4D48 /* TopViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopViewOutput.swift; sourceTree = "<group>"; };
 		5C6B7E267A1DD6B04D32BCEF /* TopRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopRouterTests.swift; sourceTree = "<group>"; };
 		6F1CF1B2A1A8333C2DB29EE5 /* TopInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopInteractorOutput.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		2EBE8E6B241F213A00A3FBAB /* SwiftForCompass */ = {
 			isa = PBXGroup;
 			children = (
+				2EBE8E90241F2A4700A3FBAB /* Entity */,
 				2EBE8E6C241F213A00A3FBAB /* AppDelegate.swift */,
 				2EBE8E6E241F213A00A3FBAB /* SceneDelegate.swift */,
 				2EBE8E72241F213A00A3FBAB /* Main.storyboard */,
@@ -159,6 +164,7 @@
 				2EBE8E7A241F213B00A3FBAB /* Info.plist */,
 				B0B8995B214F1B4F10BCA5AC /* Modules */,
 				14EE529AE8ED60ABAF74B733 /* Tests */,
+				2EBE8E8E241F271E00A3FBAB /* Agent.swift */,
 			);
 			path = SwiftForCompass;
 			sourceTree = "<group>";
@@ -170,6 +176,14 @@
 				2EBE8E85241F213B00A3FBAB /* Info.plist */,
 			);
 			path = SwiftForCompassTests;
+			sourceTree = "<group>";
+		};
+		2EBE8E90241F2A4700A3FBAB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2EBE8E91241F2A4D00A3FBAB /* Event.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		480E7DABDD377BFC079656DF /* Presenter */ = {
@@ -366,7 +380,9 @@
 				5BAA9DEE543055BF83F135A8 /* TopViewOutput.swift in Sources */,
 				E47652246F1291104E56BAA7 /* TopViewController.swift in Sources */,
 				D989B0E477364E66B0303C84 /* TopModuleInput.swift in Sources */,
+				2EBE8E8F241F271E00A3FBAB /* Agent.swift in Sources */,
 				C6531897BE04CC872EC8D4CB /* TopPresenter.swift in Sources */,
+				2EBE8E92241F2A4D00A3FBAB /* Event.swift in Sources */,
 				B0C4AA64BB34394DBFFF4982 /* TopInteractorInput.swift in Sources */,
 				2052E37CE845B368C1BFA489 /* TopInteractorOutput.swift in Sources */,
 				F0BF6B868C9803CADD0AD73F /* TopInteractor.swift in Sources */,
