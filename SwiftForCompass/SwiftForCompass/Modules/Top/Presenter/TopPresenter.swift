@@ -12,7 +12,20 @@ class TopPresenter: TopModuleInput, TopViewOutput, TopInteractorOutput {
     var interactor: TopInteractorInput!
     var router: TopRouterInput!
 
+    // MARK: TopViewOutput
     func viewIsReady() {
-
+        print("[TopPresenter] viewIsReady")
+        self.interactor.fetchEvent(nil)
     }
+
+    
+    // MARK: TopInteractorOutput
+    func onSuccessedFetchEvent(events: [Event]) {
+        self.view.reloadDataWithEvents(events: events)
+    }
+    
+    func onFailedFetchEvent(errorMessage: String) {
+        print("[onFailedFetchEvent] error = \(errorMessage)")
+    }
+
 }

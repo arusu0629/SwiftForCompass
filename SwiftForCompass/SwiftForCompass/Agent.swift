@@ -23,6 +23,7 @@ struct Agent {
     }
     
     func run<T: Decodable>(_ request: URLRequest, onDecode: @escaping (Result<Response<T>, CompassApiError>) -> Void) {
+        print("url = \(request.url)")
         let task = URLSession.shared.dataTask(with: request) { (data, urlResponse, error) in
             func execCompletionOnMainThread(_ result: Result<Response<T>, CompassApiError>) {
                 DispatchQueue.main.async {
@@ -65,13 +66,15 @@ enum CompassApi {
 }
 
 extension CompassApi {
-    static func searchEvent(_ withKeyword: String = "", completion: @escaping ((Result<Agent.Response<SearchEventsResponse>, Agent.CompassApiError>) -> Void)) {
+    static func searchEvent(_ withKeyword: String?, completion: @escaping ((Result<Agent.Response<SearchEventsResponse>, Agent.CompassApiError>) -> Void)) {
         let path = "event"
         let url = base.appendingPathComponent(path)
         var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)!
-        urlComponents.queryItems = [
-            URLQueryItem(name: "keyword", value: withKeyword)
-        ]
+        if let keyword = withKeyword {
+            urlComponents.queryItems = [
+                URLQueryItem(name: "keyword", value: keyword)
+            ]
+        }
         let request = URLRequest(url: urlComponents.url!)
         agent.run(request, onDecode: completion)
     }

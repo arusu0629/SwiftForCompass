@@ -11,15 +11,54 @@ import UIKit
 class TopViewController: UIViewController, TopViewInput {
 
     var output: TopViewOutput!
-
+    @IBOutlet weak var eventTableView: UITableView! {
+        didSet {
+            eventTableView.separatorStyle = .none
+            eventTableView.register(UINib(nibName: "EventTableViewCell", bundle: nil), forCellReuseIdentifier: EventTableViewCell.Identifier)
+        }
+    }
+    
+    var eventList = [Event]()
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
+        print("[TopViewController] viewDidLoad")
     }
 
 
     // MARK: TopViewInput
     func setupInitialState() {
+    }
+    
+    func reloadDataWithEvents(events: [Event]) {
+        self.eventList = events
+        self.eventTableView.reloadData()
+    }
+    
+
+}
+
+extension TopViewController: UITableViewDelegate {
+    // Cell間に設けたい余白の高さを指定
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 15
+    }
+}
+
+extension TopViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: EventTableViewCell.Identifier, for: indexPath) as! EventTableViewCell
+        cell.setup(event: self.eventList[indexPath.section])
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.eventList.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
 }

@@ -26,16 +26,16 @@ struct Event: Codable {
     let id: Int
     let title: String
     let description: String
-    let url: String
-    let startAt: String
-    let endAt: String
-    let address: String
-    let place: String
+    let url: String?
+    let startAt: String?
+    let endAt: String?
+    let address: String?
+    let place: String?
     let lat: String?
     let lon: String?
-    let limit: Int
-    let accepted: Int
-    let waiting: Int
+    let limit: Int?
+    let accepted: Int?
+    let waiting: Int?
 }
 
 extension Event {

@@ -9,5 +9,6 @@
 import Foundation
 
 protocol TopInteractorOutput: class {
-
+    func onSuccessedFetchEvent(events: [Event])
+    func onFailedFetchEvent(errorMessage: String)
 }

@@ -9,5 +9,18 @@
 class TopInteractor: TopInteractorInput {
 
     weak var output: TopInteractorOutput!
-
+    
+    func fetchEvent(_ searchWords: String?) {
+        print("[TopInteractor] fetchEvent")
+        CompassApi.searchEvent(searchWords) { (result) in
+            switch result {
+            case .success(let response):
+                self.output.onSuccessedFetchEvent(events: response.value.events)
+            case .failure(let error):
+                print(error)
+                self.output.onFailedFetchEvent(errorMessage: error.localizedDescription)
+            }
+        }
+    }
+    
 }
