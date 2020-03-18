@@ -23,6 +23,11 @@ class TopViewController: UIViewController, TopViewInput {
             eventTableView.refreshControl = tableViewPullToRefreshControl
         }
     }
+    @IBOutlet weak var eventSearchTextField: UITextField! {
+        didSet {
+            eventSearchTextField.setIcon(UIImage(systemName: "magnifyingglass")!)
+        }
+    }
     
     var eventList = [Event]()
     
@@ -35,13 +40,12 @@ class TopViewController: UIViewController, TopViewInput {
     }
     
     @objc func refresh(sender: UIRefreshControl) {
-        // TODO: TextFieldに入力されている文字
-        output.refreshEventList(keyword: "swift勉強会")
+        output.refreshEventList(keyword: eventSearchTextField.text ?? "")
     }
     
     func fetchEventList() {
-        // TODO: TextFieldに入力されている文字
-        output.fetchEventList(keyword: "swift勉強会")
+        let searchWord = eventSearchTextField.text ?? ""
+        output.fetchEventList(keyword: searchWord)
     }
 
     // MARK: TopViewInput
@@ -52,6 +56,14 @@ class TopViewController: UIViewController, TopViewInput {
         self.eventList = events
         self.eventTableView.reloadData()
         tableViewPullToRefreshControl.endRefreshing()
+    }
+}
+
+extension TopViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.fetchEventList()
+        eventSearchTextField.resignFirstResponder()
+        return true
     }
 }
 

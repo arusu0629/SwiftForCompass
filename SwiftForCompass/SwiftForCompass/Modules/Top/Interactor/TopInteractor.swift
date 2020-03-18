@@ -10,8 +10,7 @@ class TopInteractor: TopInteractorInput {
 
     weak var output: TopInteractorOutput!
     
-    func fetchEvent(_ searchWords: String?, startIndex: Int, count: Int) {
-        print("[TopInteractor] fetchEvent")
+    func fetchEvent(_ searchWords: String, startIndex: Int, count: Int) {
         CompassApi.searchEvent(searchWords, startIndex: startIndex, count: count) { (result) in
             switch result {
             case .success(let response):
@@ -23,8 +22,7 @@ class TopInteractor: TopInteractorInput {
         }
     }
     
-    func refreshEvent(_ searchWords: String?) {
-        print("[TopInteractor] refreshEvent")
+    func refreshEvent(_ searchWords: String) {
         CompassApi.searchEvent(searchWords) { (result) in
             switch result {
             case .success(let response):

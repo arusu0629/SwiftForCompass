@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0CFE9FD50841E91B1DE72AF7 /* TopPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9A35A9CCB5E0577BAA8D2 /* TopPresenterTests.swift */; };
 		2052E37CE845B368C1BFA489 /* TopInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1CF1B2A1A8333C2DB29EE5 /* TopInteractorOutput.swift */; };
+		2E43F8562422112000262CAF /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E43F8552422112000262CAF /* UITextField.swift */; };
 		2EBE8E6D241F213A00A3FBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE8E6C241F213A00A3FBAB /* AppDelegate.swift */; };
 		2EBE8E6F241F213A00A3FBAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE8E6E241F213A00A3FBAB /* SceneDelegate.swift */; };
 		2EBE8E74241F213A00A3FBAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EBE8E72241F213A00A3FBAB /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		16338955543AC7466B6829C0 /* TopPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopPresenter.swift; sourceTree = "<group>"; };
 		1FB83E26AE6477D689D2750C /* TopInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopInitializer.swift; sourceTree = "<group>"; };
 		29564A4478B2F48B043B26AA /* TopConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopConfiguratorTests.swift; sourceTree = "<group>"; };
+		2E43F8552422112000262CAF /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		2EBE8E69241F213A00A3FBAB /* SwiftForCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftForCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBE8E6C241F213A00A3FBAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EBE8E6E241F213A00A3FBAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2E43F8542422110B00262CAF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E43F8552422112000262CAF /* UITextField.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2EBE8E60241F213A00A3FBAB = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +169,7 @@
 		2EBE8E6B241F213A00A3FBAB /* SwiftForCompass */ = {
 			isa = PBXGroup;
 			children = (
+				2E43F8542422110B00262CAF /* Extensions */,
 				2EBE8E90241F2A4700A3FBAB /* Entity */,
 				2EBE8E6C241F213A00A3FBAB /* AppDelegate.swift */,
 				2EBE8E6E241F213A00A3FBAB /* SceneDelegate.swift */,
@@ -386,6 +397,7 @@
 				A796965A4BBFC1B7FF8BD0F3 /* TopViewInput.swift in Sources */,
 				5BAA9DEE543055BF83F135A8 /* TopViewOutput.swift in Sources */,
 				E47652246F1291104E56BAA7 /* TopViewController.swift in Sources */,
+				2E43F8562422112000262CAF /* UITextField.swift in Sources */,
 				D989B0E477364E66B0303C84 /* TopModuleInput.swift in Sources */,
 				2EBE8E8F241F271E00A3FBAB /* Agent.swift in Sources */,
 				C6531897BE04CC872EC8D4CB /* TopPresenter.swift in Sources */,
