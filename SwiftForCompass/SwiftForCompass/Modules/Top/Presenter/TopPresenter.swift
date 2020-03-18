@@ -38,9 +38,23 @@ class TopPresenter: TopModuleInput, TopViewOutput, TopInteractorOutput {
 
     // MARK: TopViewOutput
     func viewIsReady() {
+        // TOOD: 最後に検索したイベント名を端末に保存しておき、それを検索するようにする
+        refreshEventList(keyword: "")
+    }
+    
+    func eventSearchTextFieldReturn(searchWord: String) {
+        refreshEventList(keyword: searchWord)
+    }
+    
+    func eventListTableViewPullToRefresh() {
+        fetchEventList(keyword: lastSearchKeyword)
+    }
+    
+    func eventListTablelViewDidBottom() {
+        fetchEventList(keyword: lastSearchKeyword)
     }
     // 最新イベント情報を取得(主にPull To Refreshで利用)
-    func refreshEventList(keyword: String = "") {
+    private func refreshEventList(keyword: String) {
         if isRefresing {
             return
         }
@@ -50,7 +64,7 @@ class TopPresenter: TopModuleInput, TopViewOutput, TopInteractorOutput {
     }
 
     // 次のイベント情報を取得(主にTableViewの最下部時のフェッチで利用)
-    func fetchEventList(keyword: String = "") {
+    private func fetchEventList(keyword: String) {
         if isFetching {
             return
         }

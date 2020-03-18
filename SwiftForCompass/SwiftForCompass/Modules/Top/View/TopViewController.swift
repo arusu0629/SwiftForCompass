@@ -36,16 +36,10 @@ class TopViewController: UIViewController, TopViewInput {
         super.viewDidLoad()
         self.title = navigationTitle
         output.viewIsReady()
-        fetchEventList()
     }
     
     @objc func refresh(sender: UIRefreshControl) {
-        output.refreshEventList(keyword: eventSearchTextField.text ?? "")
-    }
-    
-    func fetchEventList() {
-        let searchWord = eventSearchTextField.text ?? ""
-        output.fetchEventList(keyword: searchWord)
+        output.eventListTableViewPullToRefresh()
     }
 
     // MARK: TopViewInput
@@ -61,7 +55,7 @@ class TopViewController: UIViewController, TopViewInput {
 
 extension TopViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.fetchEventList()
+        output.eventSearchTextFieldReturn(searchWord: textField.text ?? "")
         eventSearchTextField.resignFirstResponder()
         return true
     }
@@ -78,7 +72,7 @@ extension TopViewController: UITableViewDelegate {
         let distanceToBottom = contentSizeY - (scrollView.contentOffset.y + scrollView.frame.height)
         
         if distanceToBottom < 200 {
-            fetchEventList()
+            output.eventListTablelViewDidBottom()
         }
     }
 }

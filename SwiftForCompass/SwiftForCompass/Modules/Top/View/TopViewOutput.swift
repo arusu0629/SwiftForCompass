@@ -13,7 +13,7 @@ protocol TopViewOutput {
         Notify presenter that view is ready
     */
     func viewIsReady()
-
-    func refreshEventList(keyword: String)
-    func fetchEventList(keyword: String)
+    func eventSearchTextFieldReturn(searchWord: String)
+    func eventListTableViewPullToRefresh()
+    func eventListTablelViewDidBottom()
 }
