@@ -17,7 +17,10 @@ class TopPresenter: TopModuleInput, TopViewOutput, TopInteractorOutput {
         print("[TopPresenter] viewIsReady")
         self.interactor.fetchEvent(nil)
     }
-
+    func refreshEventList(keyword: String?) {
+        print("[TopPresenter] refreshEventList")
+        self.interactor.fetchEvent(keyword)
+    }
     
     // MARK: TopInteractorOutput
     func onSuccessedFetchEvent(events: [Event]) {

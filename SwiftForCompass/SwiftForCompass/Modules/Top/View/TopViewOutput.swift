@@ -12,6 +12,7 @@ protocol TopViewOutput {
         @author Toru_Nakandakari
         Notify presenter that view is ready
     */
-
     func viewIsReady()
+
+    func refreshEventList(keyword: String?)
 }

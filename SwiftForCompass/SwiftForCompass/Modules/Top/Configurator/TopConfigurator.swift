@@ -30,6 +30,7 @@ class TopModuleConfigurator {
 
         presenter.interactor = interactor
         viewController.output = presenter
+
     }
 
 }

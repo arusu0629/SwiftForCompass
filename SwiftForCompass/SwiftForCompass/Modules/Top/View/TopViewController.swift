@@ -9,12 +9,18 @@
 import UIKit
 
 class TopViewController: UIViewController, TopViewInput {
+    
+    let navigationTitle = "イベント"
+    let tableViewPullToRefreshControl = UIRefreshControl()
 
     var output: TopViewOutput!
     @IBOutlet weak var eventTableView: UITableView! {
         didSet {
             eventTableView.separatorStyle = .none
             eventTableView.register(UINib(nibName: "EventTableViewCell", bundle: nil), forCellReuseIdentifier: EventTableViewCell.Identifier)
+            // Pull To Refresh
+            tableViewPullToRefreshControl.addTarget(self, action: #selector(TopViewController.refresh(sender:)), for: .valueChanged)
+            eventTableView.refreshControl = tableViewPullToRefreshControl
         }
     }
     
@@ -24,9 +30,13 @@ class TopViewController: UIViewController, TopViewInput {
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
-        print("[TopViewController] viewDidLoad")
+        self.title = navigationTitle
     }
-
+    
+    @objc func refresh(sender: UIRefreshControl) {
+        // TODO: TextFieldに入力されている文字
+        output.refreshEventList(keyword: nil)
+    }
 
     // MARK: TopViewInput
     func setupInitialState() {
@@ -35,9 +45,8 @@ class TopViewController: UIViewController, TopViewInput {
     func reloadDataWithEvents(events: [Event]) {
         self.eventList = events
         self.eventTableView.reloadData()
+        tableViewPullToRefreshControl.endRefreshing()
     }
-    
-
 }
 
 extension TopViewController: UITableViewDelegate {
