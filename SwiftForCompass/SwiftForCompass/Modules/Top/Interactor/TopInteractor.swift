@@ -10,15 +10,28 @@ class TopInteractor: TopInteractorInput {
 
     weak var output: TopInteractorOutput!
     
-    func fetchEvent(_ searchWords: String?) {
+    func fetchEvent(_ searchWords: String?, startIndex: Int, count: Int) {
         print("[TopInteractor] fetchEvent")
-        CompassApi.searchEvent(searchWords) { (result) in
+        CompassApi.searchEvent(searchWords, startIndex: startIndex, count: count) { (result) in
             switch result {
             case .success(let response):
-                self.output.onSuccessedFetchEvent(events: response.value.events)
+                self.output.onSuccessedFetchEvent(events: response.value.events, availableEventCount: response.value.resultAvailable)
             case .failure(let error):
                 print(error)
                 self.output.onFailedFetchEvent(errorMessage: error.localizedDescription)
+            }
+        }
+    }
+    
+    func refreshEvent(_ searchWords: String?) {
+        print("[TopInteractor] refreshEvent")
+        CompassApi.searchEvent(searchWords) { (result) in
+            switch result {
+            case .success(let response):
+                self.output.onSuccessedRefreshEvent(events: response.value.events, availableEventCount: response.value.resultAvailable)
+            case .failure(let error):
+                print(error)
+                self.output.onFailedRefreshEvent(errorMessage: error.localizedDescription)
             }
         }
     }

@@ -9,5 +9,6 @@
 import Foundation
 
 protocol TopInteractorInput {
-    func fetchEvent(_ searchWords: String?)
+    func fetchEvent(_ searchWords: String?, startIndex: Int, count: Int)
+    func refreshEvent(_ searchWorfs: String?)
 }

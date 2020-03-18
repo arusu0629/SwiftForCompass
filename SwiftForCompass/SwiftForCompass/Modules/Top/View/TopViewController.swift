@@ -29,13 +29,19 @@ class TopViewController: UIViewController, TopViewInput {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.viewIsReady()
         self.title = navigationTitle
+        output.viewIsReady()
+        fetchEventList()
     }
     
     @objc func refresh(sender: UIRefreshControl) {
         // TODO: TextFieldに入力されている文字
-        output.refreshEventList(keyword: nil)
+        output.refreshEventList(keyword: "swift勉強会")
+    }
+    
+    func fetchEventList() {
+        // TODO: TextFieldに入力されている文字
+        output.fetchEventList(keyword: "swift勉強会")
     }
 
     // MARK: TopViewInput
@@ -53,6 +59,15 @@ extension TopViewController: UITableViewDelegate {
     // Cell間に設けたい余白の高さを指定
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 15
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentSizeY = scrollView.contentSize.height
+        let distanceToBottom = contentSizeY - (scrollView.contentOffset.y + scrollView.frame.height)
+        
+        if distanceToBottom < 200 {
+            fetchEventList()
+        }
     }
 }
 

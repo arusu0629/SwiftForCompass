@@ -15,4 +15,5 @@ protocol TopViewOutput {
     func viewIsReady()
 
     func refreshEventList(keyword: String?)
+    func fetchEventList(keyword: String?)
 }
