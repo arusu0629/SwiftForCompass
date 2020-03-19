@@ -6,6 +6,8 @@
 //  Copyright © 2020 t-nakandakari. All rights reserved.
 //
 
+import UIKit
+
 protocol TopViewOutput {
 
     /**
@@ -17,4 +19,6 @@ protocol TopViewOutput {
     func eventListTableViewPullToRefresh()
     func eventListTablelViewDidBottom()
     func onTappedRefreshButton()
+    func onTappedEventDetailButton(navigationController: UINavigationController, event: Event)
+    func onTappedEventLocationButton(navigationController: UINavigationController, event: Event)
 }

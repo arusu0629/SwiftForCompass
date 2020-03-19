@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0CFE9FD50841E91B1DE72AF7 /* TopPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9A35A9CCB5E0577BAA8D2 /* TopPresenterTests.swift */; };
+		14562016020152457E8F90B3 /* WebModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD7EE7ACE095CC0577D6134 /* WebModuleInput.swift */; };
+		202D5DBA17F020C07D571BE8 /* WebPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B9F41B10A02E7A22C828E1 /* WebPresenterTests.swift */; };
 		2052E37CE845B368C1BFA489 /* TopInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1CF1B2A1A8333C2DB29EE5 /* TopInteractorOutput.swift */; };
+		2354AEADE17E482954C799D4 /* WebInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A48DBF70C804EF4063F937 /* WebInitializer.swift */; };
 		2E43F8562422112000262CAF /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E43F8552422112000262CAF /* UITextField.swift */; };
 		2EBE8E6D241F213A00A3FBAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE8E6C241F213A00A3FBAB /* AppDelegate.swift */; };
 		2EBE8E6F241F213A00A3FBAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE8E6E241F213A00A3FBAB /* SceneDelegate.swift */; };
@@ -21,16 +24,30 @@
 		2EBE8E95241F5BF100A3FBAB /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE8E93241F5BF100A3FBAB /* EventTableViewCell.swift */; };
 		2EBE8E96241F5BF100A3FBAB /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EBE8E94241F5BF100A3FBAB /* EventTableViewCell.xib */; };
 		3CC7E83FD4A20EEE511B6039 /* TopConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266277721BA58DF65439A27 /* TopConfigurator.swift */; };
+		4A6B8490FE74ED6E97EFAC91 /* WebInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB7F34DF52166DBCEBF8C8 /* WebInteractorTests.swift */; };
 		5BAA9DEE543055BF83F135A8 /* TopViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D43099864F3605BBDCE4D48 /* TopViewOutput.swift */; };
 		5F800C7124FC3F27438DC2D2 /* TopRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD58734F88649BC762F42E4F /* TopRouter.swift */; };
+		6BA0CB18086EBA38D3D93BAB /* WebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DFC5C8B34DC0FCAAC0B9F /* WebViewTests.swift */; };
+		6DB0F6830B8A9F4675A34F5A /* WebInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8787BB1DF19CBC44444EEE /* WebInteractor.swift */; };
+		7CE128E11A91589AFD89120E /* WebPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430AA40334BB7F30C636C1D0 /* WebPresenter.swift */; };
 		804F7A0D4E732A5CABE4FDB8 /* TopRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B7E267A1DD6B04D32BCEF /* TopRouterTests.swift */; };
+		831902E8ED171ED7EBE7C2CB /* WebConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1003C8C767EF52FD4E2C9FF /* WebConfiguratorTests.swift */; };
+		87392F07D5231EF5A3DAF450 /* WebViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4582D5429B94DDF1C831B1E2 /* WebViewOutput.swift */; };
+		9319D56701A743B515374F00 /* WebInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C180560050827F217E53B2 /* WebInteractorInput.swift */; };
+		974917D9300B49F7074057CB /* WebRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CC48358D98AC8FBC5BBE89 /* WebRouter.swift */; };
 		A58E0FBB1DCD83A7858E1A50 /* TopInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A064CD991174A11DD7D00A /* TopInteractorTests.swift */; };
+		A72A9A8BED186CB857DAA8D6 /* WebRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CA60B4DC123561DB2E522C /* WebRouterInput.swift */; };
 		A796965A4BBFC1B7FF8BD0F3 /* TopViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2737CBCFAE44CBECC6ED8 /* TopViewInput.swift */; };
 		B0C4AA64BB34394DBFFF4982 /* TopInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5F6CA9DA10FAA9A49D59A /* TopInteractorInput.swift */; };
 		B5C03F8A97870B08118E6A8D /* TopConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29564A4478B2F48B043B26AA /* TopConfiguratorTests.swift */; };
+		BA9BADADDDF2FE9E96824024 /* WebConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDA0EA09DF8A834F7BA6BA4 /* WebConfigurator.swift */; };
+		BBD4DC7C7E90DBCD407556CB /* WebViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C0EF41BE92B7DF5636226 /* WebViewInput.swift */; };
 		C6531897BE04CC872EC8D4CB /* TopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16338955543AC7466B6829C0 /* TopPresenter.swift */; };
+		CF02A63D3ED1EEF446B53669 /* WebRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D10E1721431EF20952B8C /* WebRouterTests.swift */; };
 		D989B0E477364E66B0303C84 /* TopModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BF464665302000C0AD67E /* TopModuleInput.swift */; };
 		DC7E4D26694B27B0041EE860 /* TopInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB83E26AE6477D689D2750C /* TopInitializer.swift */; };
+		DD683674B02FBAD1D7C0F172 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9756647A8089FB9624CF4855 /* WebViewController.swift */; };
+		E070BEDA911BA726FC9A948A /* WebInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD79762B4F4B0501122F57D3 /* WebInteractorOutput.swift */; };
 		E23D0DE7D9DCAB0973685A7D /* TopRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B6C36D09812CA3C7AC297 /* TopRouterInput.swift */; };
 		E47652246F1291104E56BAA7 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CC29B2E5C2E048CDE1F12 /* TopViewController.swift */; };
 		EBF4F9D7443FDB1602DD6EA9 /* TopViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8C5EE9E139BB0BDEF4379D /* TopViewTests.swift */; };
@@ -48,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A8D10E1721431EF20952B8C /* WebRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebRouterTests.swift; sourceTree = "<group>"; };
 		0F8C5EE9E139BB0BDEF4379D /* TopViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopViewTests.swift; sourceTree = "<group>"; };
 		16338955543AC7466B6829C0 /* TopPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopPresenter.swift; sourceTree = "<group>"; };
 		1FB83E26AE6477D689D2750C /* TopInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopInitializer.swift; sourceTree = "<group>"; };
@@ -67,18 +85,34 @@
 		2EBE8E91241F2A4D00A3FBAB /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		2EBE8E93241F5BF100A3FBAB /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		2EBE8E94241F5BF100A3FBAB /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		341DFC5C8B34DC0FCAAC0B9F /* WebViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewTests.swift; sourceTree = "<group>"; };
 		3D43099864F3605BBDCE4D48 /* TopViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopViewOutput.swift; sourceTree = "<group>"; };
+		430AA40334BB7F30C636C1D0 /* WebPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebPresenter.swift; sourceTree = "<group>"; };
+		4582D5429B94DDF1C831B1E2 /* WebViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewOutput.swift; sourceTree = "<group>"; };
+		47A48DBF70C804EF4063F937 /* WebInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebInitializer.swift; sourceTree = "<group>"; };
+		53CC48358D98AC8FBC5BBE89 /* WebRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebRouter.swift; sourceTree = "<group>"; };
 		5C6B7E267A1DD6B04D32BCEF /* TopRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopRouterTests.swift; sourceTree = "<group>"; };
+		6BD7EE7ACE095CC0577D6134 /* WebModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebModuleInput.swift; sourceTree = "<group>"; };
 		6F1CF1B2A1A8333C2DB29EE5 /* TopInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopInteractorOutput.swift; sourceTree = "<group>"; };
+		6FDA0EA09DF8A834F7BA6BA4 /* WebConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebConfigurator.swift; sourceTree = "<group>"; };
 		7CB9A35A9CCB5E0577BAA8D2 /* TopPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopPresenterTests.swift; sourceTree = "<group>"; };
 		8266277721BA58DF65439A27 /* TopConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopConfigurator.swift; sourceTree = "<group>"; };
+		866C0EF41BE92B7DF5636226 /* WebViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewInput.swift; sourceTree = "<group>"; };
 		8C4CC29B2E5C2E048CDE1F12 /* TopViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		94A2737CBCFAE44CBECC6ED8 /* TopViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopViewInput.swift; sourceTree = "<group>"; };
+		9756647A8089FB9624CF4855 /* WebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		A1003C8C767EF52FD4E2C9FF /* WebConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebConfiguratorTests.swift; sourceTree = "<group>"; };
+		AD79762B4F4B0501122F57D3 /* WebInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebInteractorOutput.swift; sourceTree = "<group>"; };
 		B17BF464665302000C0AD67E /* TopModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopModuleInput.swift; sourceTree = "<group>"; };
+		B5AB7F34DF52166DBCEBF8C8 /* WebInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebInteractorTests.swift; sourceTree = "<group>"; };
 		BD58734F88649BC762F42E4F /* TopRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopRouter.swift; sourceTree = "<group>"; };
+		BD8787BB1DF19CBC44444EEE /* WebInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebInteractor.swift; sourceTree = "<group>"; };
+		C4B9F41B10A02E7A22C828E1 /* WebPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebPresenterTests.swift; sourceTree = "<group>"; };
 		CED5F6CA9DA10FAA9A49D59A /* TopInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopInteractorInput.swift; sourceTree = "<group>"; };
 		D333E3275ADF78BDFCF21239 /* TopInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopInteractor.swift; sourceTree = "<group>"; };
+		E7C180560050827F217E53B2 /* WebInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebInteractorInput.swift; sourceTree = "<group>"; };
 		E91B6C36D09812CA3C7AC297 /* TopRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopRouterInput.swift; sourceTree = "<group>"; };
+		F7CA60B4DC123561DB2E522C /* WebRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebRouterInput.swift; sourceTree = "<group>"; };
 		F8A064CD991174A11DD7D00A /* TopInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				05E17A6EC0DAF1C50241AFA5 /* Top */,
+				62B1156816870C46591894C1 /* Web */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -138,6 +173,26 @@
 				0F8C5EE9E139BB0BDEF4379D /* TopViewTests.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		21464ED8846F233ABBF47C39 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				A1003C8C767EF52FD4E2C9FF /* WebConfiguratorTests.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		2AAC6320014E775C91EBB128 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E7C180560050827F217E53B2 /* WebInteractorInput.swift */,
+				AD79762B4F4B0501122F57D3 /* WebInteractorOutput.swift */,
+				BD8787BB1DF19CBC44444EEE /* WebInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		2E43F8542422110B00262CAF /* Extensions */ = {
@@ -201,6 +256,15 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		3FA5A63FC7FD52B3428699A1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C4B9F41B10A02E7A22C828E1 /* WebPresenterTests.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		480E7DABDD377BFC079656DF /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +272,49 @@
 				16338955543AC7466B6829C0 /* TopPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		502E2FF86045D49A956DA13A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F7CA60B4DC123561DB2E522C /* WebRouterInput.swift */,
+				53CC48358D98AC8FBC5BBE89 /* WebRouter.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5E0BEEF25AF98D20EE7296F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				341DFC5C8B34DC0FCAAC0B9F /* WebViewTests.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		62B1156816870C46591894C1 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				21464ED8846F233ABBF47C39 /* Configurator */,
+				5E0BEEF25AF98D20EE7296F5 /* View */,
+				BDE94AD6696B34EB67439BAF /* Interactor */,
+				3FA5A63FC7FD52B3428699A1 /* Presenter */,
+				94497FEC506FAE194F60E308 /* Router */,
+			);
+			name = Web;
+			path = Web;
+			sourceTree = "<group>";
+		};
+		657511334FA887DBD699F9ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				866C0EF41BE92B7DF5636226 /* WebViewInput.swift */,
+				4582D5429B94DDF1C831B1E2 /* WebViewOutput.swift */,
+				9756647A8089FB9624CF4855 /* WebViewController.swift */,
+			);
+			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		718185DDF4E1F2FE813A4286 /* Router */ = {
@@ -255,6 +362,15 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		94497FEC506FAE194F60E308 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0A8D10E1721431EF20952B8C /* WebRouterTests.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
 		96FE2512F1FA7DFD9E4C2FE5 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				131C0A499EA9530F456815DC /* Top */,
+				EDC88395538186762A0A9F6D /* Web */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -281,6 +398,35 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		BDE94AD6696B34EB67439BAF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B5AB7F34DF52166DBCEBF8C8 /* WebInteractorTests.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CF1D25670555C66A871A3BF4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6BD7EE7ACE095CC0577D6134 /* WebModuleInput.swift */,
+				430AA40334BB7F30C636C1D0 /* WebPresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CF561D068724D2FFEDE4648D /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				6FDA0EA09DF8A834F7BA6BA4 /* WebConfigurator.swift */,
+				47A48DBF70C804EF4063F937 /* WebInitializer.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		DC679305A4F29C4F442A1044 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +434,19 @@
 				1FB83E26AE6477D689D2750C /* TopInitializer.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		EDC88395538186762A0A9F6D /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				657511334FA887DBD699F9ED /* View */,
+				CF1D25670555C66A871A3BF4 /* Presenter */,
+				2AAC6320014E775C91EBB128 /* Interactor */,
+				502E2FF86045D49A956DA13A /* Router */,
+				CF561D068724D2FFEDE4648D /* Configurator */,
+			);
+			name = Web;
+			path = Web;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +569,18 @@
 				5F800C7124FC3F27438DC2D2 /* TopRouter.swift in Sources */,
 				3CC7E83FD4A20EEE511B6039 /* TopConfigurator.swift in Sources */,
 				DC7E4D26694B27B0041EE860 /* TopInitializer.swift in Sources */,
+				BBD4DC7C7E90DBCD407556CB /* WebViewInput.swift in Sources */,
+				87392F07D5231EF5A3DAF450 /* WebViewOutput.swift in Sources */,
+				DD683674B02FBAD1D7C0F172 /* WebViewController.swift in Sources */,
+				14562016020152457E8F90B3 /* WebModuleInput.swift in Sources */,
+				7CE128E11A91589AFD89120E /* WebPresenter.swift in Sources */,
+				9319D56701A743B515374F00 /* WebInteractorInput.swift in Sources */,
+				E070BEDA911BA726FC9A948A /* WebInteractorOutput.swift in Sources */,
+				6DB0F6830B8A9F4675A34F5A /* WebInteractor.swift in Sources */,
+				A72A9A8BED186CB857DAA8D6 /* WebRouterInput.swift in Sources */,
+				974917D9300B49F7074057CB /* WebRouter.swift in Sources */,
+				BA9BADADDDF2FE9E96824024 /* WebConfigurator.swift in Sources */,
+				2354AEADE17E482954C799D4 /* WebInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +594,11 @@
 				A58E0FBB1DCD83A7858E1A50 /* TopInteractorTests.swift in Sources */,
 				0CFE9FD50841E91B1DE72AF7 /* TopPresenterTests.swift in Sources */,
 				804F7A0D4E732A5CABE4FDB8 /* TopRouterTests.swift in Sources */,
+				831902E8ED171ED7EBE7C2CB /* WebConfiguratorTests.swift in Sources */,
+				6BA0CB18086EBA38D3D93BAB /* WebViewTests.swift in Sources */,
+				4A6B8490FE74ED6E97EFAC91 /* WebInteractorTests.swift in Sources */,
+				202D5DBA17F020C07D571BE8 /* WebPresenterTests.swift in Sources */,
+				CF02A63D3ED1EEF446B53669 /* WebRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

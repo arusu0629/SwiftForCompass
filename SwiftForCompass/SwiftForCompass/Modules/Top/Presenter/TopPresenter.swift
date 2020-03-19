@@ -6,6 +6,8 @@
 //  Copyright © 2020 t-nakandakari. All rights reserved.
 //
 
+import UIKit
+
 class TopPresenter: TopModuleInput {
 
     weak var view: TopViewInput!
@@ -123,6 +125,15 @@ extension TopPresenter: TopViewOutput {
     
     func onTappedRefreshButton() {
         refreshEvent(keyword: lastSearchKeyword)
+    }
+    
+    func onTappedEventDetailButton(navigationController: UINavigationController, event: Event) {
+        // TODO: event.url が nil の場合の対応
+        router.pushToWebViewController(navigationController: navigationController, requestUrl: event.url ?? "")
+    }
+    
+    func onTappedEventLocationButton(navigationController: UINavigationController, event: Event) {
+        
     }
 }
 

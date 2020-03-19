@@ -99,5 +99,25 @@
             </objects>
             <point key="canvasLocation" x="211.59420289855075" y="138.61607142857142"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="mIB-jm-wmY">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="oHV-QQ-Fta" customClass="WebViewController" customModule="SwiftForCompass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ifX-CP-30I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1cT-Ci-KBN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2I-SY-D6Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="gjT-dr-aJN" customClass="WebModuleInitializer" customModule="SwiftForCompass" customModuleProvider="target">
+                    <connections>
+                        <outlet property="webViewController" destination="oHV-QQ-Fta" id="fij-E3-eM7"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1024" y="140"/>
+        </scene>
     </scenes>
 </document>

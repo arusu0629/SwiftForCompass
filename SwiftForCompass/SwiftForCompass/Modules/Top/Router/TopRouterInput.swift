@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
 protocol TopRouterInput {
-
+    func pushToWebViewController(navigationController: UINavigationController, requestUrl: String)
 }

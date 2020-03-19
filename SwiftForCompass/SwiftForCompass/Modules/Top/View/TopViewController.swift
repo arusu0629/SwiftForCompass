@@ -108,7 +108,7 @@ extension TopViewController: UITableViewDelegate {
 extension TopViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: EventTableViewCell.Identifier, for: indexPath) as! EventTableViewCell
-        cell.setup(event: self.eventList[indexPath.section])
+        cell.setup(event: self.eventList[indexPath.section], onTappedDetailAction: onTappedEventDetail, onTappedLocationAction: onTappedEventLocation)
         return cell
     }
     
@@ -118,5 +118,15 @@ extension TopViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+    }
+}
+
+extension TopViewController {
+    func onTappedEventDetail(event: Event) {
+        output.onTappedEventDetailButton(navigationController: navigationController!, event: event)
+    }
+    
+    func onTappedEventLocation(event: Event) {
+        output.onTappedEventLocationButton(navigationController: navigationController!, event: event)
     }
 }
