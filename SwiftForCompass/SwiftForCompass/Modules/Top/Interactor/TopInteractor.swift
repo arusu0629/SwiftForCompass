@@ -22,14 +22,14 @@ class TopInteractor: TopInteractorInput {
         }
     }
     
-    func refreshEvent(_ searchWords: String) {
+    func fetchLatestEvent(_ searchWords: String) {
         CompassApi.searchEvent(searchWords) { (result) in
             switch result {
             case .success(let response):
-                self.output.onSuccessedRefreshEvent(events: response.value.events, availableEventCount: response.value.resultAvailable)
+                self.output.onSuccessedFetchLatestEvent(events: response.value.events, availableEventCount: response.value.resultAvailable)
             case .failure(let error):
                 print(error)
-                self.output.onFailedRefreshEvent(errorMessage: error.localizedDescription)
+                self.output.onFailedFetchLatestEvent(errorMessage: error.localizedDescription)
             }
         }
     }

@@ -65,7 +65,7 @@ enum CompassApi {
 }
 
 extension CompassApi {
-    static func searchEvent(_ withKeyword: String, startIndex: Int = 1, count: Int = 10, completion: @escaping ((Result<Agent.Response<SearchEventsResponse>, Agent.CompassApiError>) -> Void)) {
+    static func searchEvent(_ withKeyword: String, startIndex: Int = 1, count: Int = 100, completion: @escaping ((Result<Agent.Response<SearchEventsResponse>, Agent.CompassApiError>) -> Void)) {
         let path = "event"
         let url = base.appendingPathComponent(path)
         var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)!

@@ -23,7 +23,7 @@ class TopPresenter: TopModuleInput, TopViewOutput, TopInteractorOutput {
     // イベント情報の最大件数
     private var lastSearchedWordEventAvailableCount = 10
     // イベントの取得件数
-    let eventFetchCount = 10
+    let eventFetchCount = 50
     // 実際に取得するイベントの件数
     private var actualEventFetchCount: Int {
         var count = eventFetchCount
@@ -39,27 +39,26 @@ class TopPresenter: TopModuleInput, TopViewOutput, TopInteractorOutput {
     // MARK: TopViewOutput
     func viewIsReady() {
         // TOOD: 最後に検索したイベント名を端末に保存しておき、それを検索するようにする
-        refreshEventList(keyword: "")
+        fetchEventList(keyword: "")
     }
     
     func eventSearchTextFieldReturn(searchWord: String) {
-        refreshEventList(keyword: searchWord)
+        fetchEventList(keyword: searchWord)
     }
     
     func eventListTableViewPullToRefresh() {
-        fetchEventList(keyword: lastSearchKeyword)
+        fetchLatestEvent(keyword: lastSearchKeyword)
     }
     
     func eventListTablelViewDidBottom() {
         fetchEventList(keyword: lastSearchKeyword)
     }
     // 最新イベント情報を取得(主にPull To Refreshで利用)
-    private func refreshEventList(keyword: String) {
+    private func fetchLatestEvent(keyword: String) {
         if isRefresing {
             return
         }
-        onSearchEvent(keyword: keyword)
-        self.interactor.refreshEvent(keyword)
+        self.interactor.fetchLatestEvent(keyword)
         isRefresing = true
     }
 
@@ -72,7 +71,7 @@ class TopPresenter: TopModuleInput, TopViewOutput, TopInteractorOutput {
         if noMoreEvent {
             return
         }
-        self.interactor.fetchEvent(keyword, startIndex: self.eventList.count + 1, count: actualEventFetchCount)
+        self.interactor.fetchEvent(keyword, startIndex: 100, count: actualEventFetchCount)
         isFetching = true
     }
     
@@ -102,16 +101,33 @@ class TopPresenter: TopModuleInput, TopViewOutput, TopInteractorOutput {
         isFetching = false
     }
     
-    func onSuccessedRefreshEvent(events: [Event], availableEventCount: Int) {
-        self.eventList = events
+    func onSuccessedFetchLatestEvent(events: [Event], availableEventCount: Int) {
+        self.eventList = createEventList(latestEvents: events)
         self.view.reloadDataWithEvents(events: self.eventList)
         
         self.lastSearchedWordEventAvailableCount = availableEventCount
         isRefresing = false
     }
     
-    func onFailedRefreshEvent(errorMessage: String) {
-        print("[onFailedRefreshEvent] error = \(errorMessage)")
+    private func createEventList(latestEvents: [Event]) -> [Event] {
+        // 最新イベント情報を既イベント情報リストに加える
+        var eventList = self.eventList
+        // 先頭に含まれるイベント情報が最新なので逆順から配列に追加していく
+        for index in (0..<latestEvents.count).reversed() {
+            // すでに含まれている場合は追加しない
+            if eventList.contains(where: { (event) in
+                event.id == latestEvents[index].id
+            }) {
+                continue
+            }
+            eventList.insert(latestEvents[index], at: 0)
+        }
+        
+        return eventList
+    }
+    
+    func onFailedFetchLatestEvent(errorMessage: String) {
+        print("[onFailedFetchLatestEvent] error = \(errorMessage)")
         isRefresing = false
     }
 }

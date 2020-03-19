@@ -11,7 +11,7 @@ import Foundation
 protocol TopInteractorOutput: class {
     func onSuccessedFetchEvent(events: [Event], availableEventCount: Int)
     func onFailedFetchEvent(errorMessage: String)
-    func onSuccessedRefreshEvent(events: [Event], availableEventCount: Int)
-    func onFailedRefreshEvent(errorMessage: String)
+    func onSuccessedFetchLatestEvent(events: [Event], availableEventCount: Int)
+    func onFailedFetchLatestEvent(errorMessage: String)
 
 }

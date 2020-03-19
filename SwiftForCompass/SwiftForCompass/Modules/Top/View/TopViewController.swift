@@ -18,8 +18,6 @@ class TopViewController: UIViewController, TopViewInput {
         didSet {
             eventTableView.separatorStyle = .none
             eventTableView.register(UINib(nibName: "EventTableViewCell", bundle: nil), forCellReuseIdentifier: EventTableViewCell.Identifier)
-            // Pull To Refresh
-            tableViewPullToRefreshControl.addTarget(self, action: #selector(TopViewController.refresh(sender:)), for: .valueChanged)
             eventTableView.refreshControl = tableViewPullToRefreshControl
         }
     }
@@ -38,7 +36,8 @@ class TopViewController: UIViewController, TopViewInput {
         output.viewIsReady()
     }
     
-    @objc func refresh(sender: UIRefreshControl) {
+    // Pull To Refresh
+    func pullToRefresh() {
         output.eventListTableViewPullToRefresh()
     }
 
@@ -73,6 +72,13 @@ extension TopViewController: UITableViewDelegate {
         
         if distanceToBottom < 200 {
             output.eventListTablelViewDidBottom()
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        // Pull To Refresh で指で引っ張って離した時に発火を行うようにする
+        if self.tableViewPullToRefreshControl.isRefreshing {
+            self.pullToRefresh()
         }
     }
 }
