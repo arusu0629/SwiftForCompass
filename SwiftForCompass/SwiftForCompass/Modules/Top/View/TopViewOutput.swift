@@ -16,4 +16,5 @@ protocol TopViewOutput {
     func eventSearchTextFieldReturn(searchWord: String)
     func eventListTableViewPullToRefresh()
     func eventListTablelViewDidBottom()
+    func onTappedRefreshButton()
 }

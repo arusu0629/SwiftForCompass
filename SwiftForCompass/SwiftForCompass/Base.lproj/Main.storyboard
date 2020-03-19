@@ -59,6 +59,10 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="3Z9-ZT-OGW"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="G8t-t9-D3A">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -73,10 +77,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LrR-sN-DxY"/>
+                    <navigationItem key="navigationItem" id="LrR-sN-DxY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="xAu-04-veQ">
+                            <connections>
+                                <action selector="onTappedRefreshButton:" destination="BYZ-38-t0r" id="Qau-vg-27q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="eventSearchTextField" destination="BDH-zf-pFY" id="Psb-ru-dqm"/>
                         <outlet property="eventTableView" destination="qrH-R4-7q3" id="ZzY-Hp-lfl"/>
+                        <outlet property="fetchActivityIndicatorView" destination="G8t-t9-D3A" id="TfY-IP-GHY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

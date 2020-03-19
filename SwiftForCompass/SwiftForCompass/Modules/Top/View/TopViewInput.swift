@@ -14,5 +14,7 @@ protocol TopViewInput: class {
     */
 
     func setupInitialState()
+    func showLoading()
+    func hideLoading()
     func reloadDataWithEvents(events: [Event])
 }

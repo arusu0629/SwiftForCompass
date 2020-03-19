@@ -27,12 +27,21 @@ class TopViewController: UIViewController, TopViewInput {
         }
     }
     
+    @IBOutlet weak var fetchActivityIndicatorView:
+        UIActivityIndicatorView! {
+        didSet {
+            self.fetchActivityIndicatorView.hidesWhenStopped = true
+            self.fetchActivityIndicatorView.style = .medium
+        }
+    }
+    
     var eventList = [Event]()
     
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = navigationTitle
+        self.fetchActivityIndicatorView.center = self.view.center
         output.viewIsReady()
     }
     
@@ -40,9 +49,22 @@ class TopViewController: UIViewController, TopViewInput {
     func pullToRefresh() {
         output.eventListTableViewPullToRefresh()
     }
+    
+    // ナビゲーションバーの更新ボタンを押した時
+    @IBAction func onTappedRefreshButton(_ sender: Any) {
+        output.onTappedRefreshButton()
+    }
 
     // MARK: TopViewInput
     func setupInitialState() {
+    }
+    
+    func showLoading() {
+        fetchActivityIndicatorView.startAnimating()
+    }
+    
+    func hideLoading() {
+        fetchActivityIndicatorView.stopAnimating()
     }
     
     func reloadDataWithEvents(events: [Event]) {
